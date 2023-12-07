@@ -31,7 +31,7 @@ class Employee:
         if self.contract_type == "monthly" and self.commission == 0:
             return f"{self.name} works on a monthly salary of {self.get_pay()}. Their total pay is {self.get_pay()}."
         elif self.contract_type == "hourly" and self.commission == 0:
-            return f"{self.name} works on a contract of {self.hours} at {self.salary}/hour. Their total pay is {self.get_pay()}."
+            return f"{self.name} works on a contract of {self.hours} hours at {self.salary}/hour. Their total pay is {self.get_pay()}."
         elif self.contract_type == "monthly" and self.commission_type == "contract":
             return f"{self.name} works on a monthly salary of {self.salary} and receives a commission for {self.num_contracts} contract(s) at {self.commission}/contract. Their total pay is {self.get_pay()}."
         elif self.contract_type == "hourly" and self.commission_type == "contract":
@@ -59,3 +59,6 @@ robbie = Employee('Robbie', 1500, "monthly", 2000, 0, "bonus", 0)
 
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
 ariel = Employee('Ariel', 600, "hourly", 30, 120, "bonus", 0)
+
+print(str(charlie))
+print(charlie.get_pay())
